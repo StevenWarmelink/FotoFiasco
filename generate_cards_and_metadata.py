@@ -82,6 +82,7 @@ def create_manual_text(df):
     suffix_map['Attribution-NonCommercial License'] = '**'
     suffix_map['Public Domain Mark']                = '***'
     suffix_map['Public Domain Dedication (CC0)']    = '****'
+    open("credits_for_manual.txt", "w").close() # clear file if it exists
     with open('credits_for_manual.txt', 'a') as the_file:
         for idx in range(len(df)):
             num       = df.loc[idx]["card_number"]
